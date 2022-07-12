@@ -1,19 +1,21 @@
 #include "main.h"
+
 /**
- * print_most_numbers - prints numbers except 2 and 4
- *
- * Return: returns nothing
+ * print_rev -> printing a string in reverse
+ * @s: the string to be printed in rev
  */
-void print_most_numbers(void)
+
+void print_rev(char *s)
 {
-	int number;
-	for (number = 48; number < 58; number++)
-	{
-		if ((number == 50) || (number == 52))
-		{
-			continue;
-		}
-		_putchar(number);
-	}
-	_putchar(10);
+	int i, n;
+
+	n = 0;
+	while (s[n] != '\0')
+		n++;
+
+			for (i = n-1; i >=0; i--)
+			{
+				_putchar(s[i]);
+			}
+	_putchar('\n');
 }
